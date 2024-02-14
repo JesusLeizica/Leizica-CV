@@ -1,0 +1,338 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.5, 1 December 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\PassOptionsToPackage{lowtilde}{url}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[9.5pt,a4paper,ragged2e, normalphoto]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.5cm,marginparsep=1cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else                                                                                  
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+\usepackage{graphicx}
+\graphicspath{ {images/} }                 
+\definecolor{IFBlue}{HTML}{0F6688}
+\definecolor{IFDarkBlue}{HTML}{00425C}
+\definecolor{IFMediumBlue}{HTML}{17739A}
+\definecolor{IFLightBlue}{HTML}{228FBD}
+
+\definecolor{IFGrey}{HTML}{6D6E71}
+\definecolor{IFDarkGrey}{HTML}{231F20}
+\definecolor{IFMediumGrey}{HTML}{4D4D4F}
+\definecolor{IFLightGrey}{HTML}{808285}
+
+\colorlet{heading}{IFBlue}
+\colorlet{accent}{IFLightBlue}
+\colorlet{emphasis}{IFMediumGrey}
+\colorlet{body}{IFGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+% \usepackage{hyperref}
+
+\begin{document}
+\name{Emmanuel Leizica}
+\tagline{Ingeniero en Recursos Naturales y Medio Ambiente
+Maestrando en Aplicaciones de Información Espacial }
+
+\photo{3cm}{logo}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  Nº Matricula Nacional SAPROCEA: 834-224
+  
+  \email{emmanuelleizica@gmail.com}
+  \phone{+54 9 2954-513538}
+  \location{La Pampa, Argentina}
+  
+  %Fecha de nacimiento: 17/10/1986 
+ % \homepage{\url{http://fma.if.usp.br/~nickolas}}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth} 
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Formación académica}
+
+\cvevent{Maestría en Aplicaciones de Información Espacial}{Instituto Gulich (CONAE\footnote{Comisión Nacional de Actividades Espaciales}-UNC\footnote{Universidad Nacional de Córdoba}) 2022 - 2024}{}{}{}{}
+%\begin{itemize}
+% \item Tesis (en desarrollo): Aplicación de datos geoespaciales derivados de sensores remotos en la estimación de la condición de suelos de uso agrícola.
+ %\item Advisor: Mgtr. Salari, Francisco
+ %\item Supported (August 2019 - Ongoing) by São Paulo Research Foundation (FAPESP) grant 2019/12158-4
+%\end{itemize}
+
+%\divider
+
+\cvevent{Diplomatura en geomática aplicada a la producción agropecuaria}{Instituto Gulich ({CONAE}{ - UNC}) 2019}{}{}{}{}
+%\begin{itemize}
+ %\item Finalizado
+ %\end{itemize}
+
+%\divider
+
+\cvevent{Doctorado en Ciencias Geológicas}{Facultad de Ciencias Exactas, Fisico-Químicas y Naturales (UNRC\footnote{Universidad Nacional de Río Cuarto}) 2016 - 2022}{}{}{}{}
+%\begin{itemize}
+ %\item Tesis (en desarrollo): Procesos pedogenéticos y mapeo de suelos en el paisaje de meseta de la región semiáreda pampeana, Argentina.
+ %\item Advisor: Dra. Elke Noellemeyer
+ %\item Supported (August 2019 - Ongoing) by São Paulo Research Foundation (FAPESP) grant 2019/12158-4
+%\end{itemize}
+
+%\divider
+
+\cvevent{Ingeniería en Recursos Naturales y Medio Ambiente}{Universidad Nacional de La Pampa 2014}{}{}{}{}
+%\begin{itemize}
+%\item Tesis: Eficiencia de tratamiento de aguas residuales urbanas.
+%\item Finalizado
+ %\item Advisors: Maria Daniela Gomez - Maria Cecilia Provensal
+ %\item Supported (August 2019 - Ongoing) by São Paulo Research Foundation (FAPESP) grant 2019/12158-4
+%\end{itemize}
+
+
+\cvsection{Experiencia laboral}
+\cvevent{Investigador en Sistemas de Información Geográfica aplicado al Agro}{AGSUS S.R.L}{Año: 2021}{La Pampa, Argentina}{}{}
+\begin{itemize}
+\item Elaboración mapas aptitud del suelo para el secuestro de carbono en establecimientos agrícolas y ganaderos mediante el uso de datos de satélites y plataforma Google Earth Engine y software QGIS.
+
+ \end{itemize}
+\divider
+
+\cvevent{Analista ambiental y SIG}{Pequímica Comodoro Rivadavia S.A.}{Año: 2015}{La Pampa, Argentina}{}{}
+ \begin{itemize}
+ \item Elaboración de documentos de Declacración de Jurada Ambiental (DJI) en el área de Exploración y Explotación de Hidrocarburos en el yacimiento "El Medanito", Departamento Puelén - Provincia de La Pampa.
+ \end{itemize}
+\divider
+
+\cvevent{Asistente técnico}{Dirección de Recursos Naturales, provincia de La Pampa}{2014 - 2015}{La Pampa, Argentina}{}{}
+ \begin{itemize}
+\item Monitoreo, control y seguimiento de planes experimentales, de conservación y manejo sostenible, de cambio de uso del suelo y toda otra actividad inherente al bosque nativo, acorde a las leyes forestales.
+\item Análisis técnico de los expedientes de infracción a las leyes forestales y llevar al día los registros que se llevan a cabo en el área forestal, acorde a las leyes forestales.
+\item Participación en capacitaciones y evaluaciones de Planes de Quemas Prescritas como herramienta de manejo de los sistemas naturales en la provincia de La Pampa. 
+\end{itemize}
+\divider
+
+
+%\begin{fullwidth}
+\newpage
+\cvsection[page2sidebar]{Actividad de investigación}
+
+
+ % \homepage{\url{http://fma.if.usp.br/~nickolas}}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{orcid.org/0000-0000-0000-0000}
+
+\cvevent{}{Participación en proyectos de investigación}{}{}{}{}
+\begin{itemize}
+ \item {Servicios ecosistémicos en agro-ecosistemas de la región semiárida pampeana. 
+ 
+Universidad Nacional de La Pampa. 01/2020 - 12/2024}
+
+\item {Desarrollo de indicadores para el monitoreo de la calidad en los suelos en la Región Semiárida Pampeana. 
+ 
+Universidad Nacional de La Pampa. 08/2017 - 08/2019}
+
+\item {Evaluación y valoración de los servicios ecosistémicos en la región semiárida pampeana. 
+ 
+Agencia Nacional de Promoción Científica y Tecnológica. 07/2017 - 07/2020}
+
+\item {Manejo sitio-específico de la tierra para mejorar la eficiencia de uso de recursos y el nivel de los servicios ecosistémicos. 
+ 
+Facultad de Agronomía, UNLPam. 01/2015 - 12/2019}
+
+\item {Procesos pedogenéticos y su relación con características de la vegetación en las mesetas de la subregión de mesetas y valles de la región semiárida pampeana, Argentina. 
+ 
+Universidad Nacional de La Pampa. 01/2018 - 12/2021}
+
+\end{itemize}
+
+\cvevent{}{Participación en proyectos de extensión}{}{}{}{}
+
+\begin{itemize}
+ \item {Los sistemas de información geográfica como herramienta para el uso del suelo con criterios de sustentabilidad. 
+ 
+Universidad Nacional de La Pampa. 08/2021-08/2023}
+
+\item {Fortalecimiento a las capacidades institucionales para mitigar el efecto de las inundaciones en La Pampa. 
+ 
+Universidad Nacional de La Pampa. 03/2018-03/2020}
+
+\item {Mitigación de las inundaciones. 
+ 
+Ministerio de Educación, Cultura, Ciencia y Tecnología de la Nación. 02/2018-02/2019}
+\end{itemize}
+
+\cvevent{}{Publicaciones en revistas científicas}{}{}{}{}
+\begin{itemize}
+\item Farrell, M., \textbf{Leizica, E}., Gili, A., Noellemeyer, E. Identification of management zones with different potential moisture availability for sustainable intensification of dryland agriculture. 2023. Precision Agriculture, volume 24, pages 1116–1131. DOI:10.1007/s11119-023-10002-2.
+
+\item Morazzo, G., Riestra, D. R., \textbf{Leizica, E}., Álvarez, L., Noellemeyer, E. Afforestation with different tree species causes a divergent evolution of soil profiles and properties. 2021. Front. For. Glob. Change. DOI: 10.3389/ffgc.2021.685827.
+
+\item \textbf{Leizica, E}., Frank Buss, M. E., Noellemeyer, E. Geomorphology as a tool to digitize homogeneous management zones based on soil properties in the semiarid central Argentinean Pampas. 2022. Geoderma Regional. 
+https://doi.org/10.1016/j.geodrs.2021.e00458
+
+\item Frank Buss, M. E., \textbf {Leizica, E}., Peinetti, R., Noellemeyer, E. Relationships between landscape features, soil properties, and vegetation determine ecological sites in a semiarid savanna of central Argentina. 2019. Journal of Arid Environments.
+doi:10.1016/j.jaridenv.2019.104038.
+
+\end{itemize}
+\newpage
+\marginpar{
+\cvsection{Software/Herramientas}
+ \begin{itemize}
+ \item Python (librerías geoespaciales)
+ \item R
+ \item QGIS
+ \item GRASS GIS
+ \item Google Earth Engine
+ \item SNAP
+\end{itemize}
+
+\cvsection{Idiomas}
+ \begin{itemize}
+ \item Inglés
+\end{itemize}
+
+
+\cvsection{Referencias}
+
+\textbf{Mg. Santiago Seppi}
+
+Director de la Maestría en Aplicaciones
+
+de Información Espacial – Instituto Gulich
+
+\phone{+54 9 351 647-4020}
+
+\textbf{Dra. Elke Johana Noellemeyer}
+
+Prof. Facultad de Agronomía UNLPam,
+
+Cátedras de suelo y de Sistema de Información Agro-geográfica
+
+\phone{+54 9 2954 45-1600}
+
+}
+
+
+\cvevent{}{Trabajos presentados en congresos y jornadas}{}{}{}{}
+\begin{itemize}
+ \item {Estudio de los incendios ocurridos en la provincia de Misiones, Argentina entre diciembre del año 2021 a marzo del año 2022.
+ XXXVI Jornadas Forestales}
+\cvevent{} {}
+{Mayo 2023}{Entre Ríos, Argentina}{}{}
+
+\item {Estados ecológicos de referencia en la eco-región del caldenal. VIII Congreso Nacional de Manejo de Pastizales Naturales y IV Congreso Internacional de Manejo de Pastizales Naturales}
+\cvevent{} {}
+{Mayo 2018}{La Rioja, Argentina}{}{}
+
+\item {Relación suelo-paisaje en la subregión de mesetas y valles, La Pampa. III Jornadas Nacionales de Suelos de Ambientes Semiáridos y II Taller Nacional de Cartografía Digital }
+\cvevent{} {}
+{Septiembre 2017}{Buenos Aires, Argentina}{}{}
+
+\item {Caracterización de sitios ecológicos en la subregión de mesetas y valles, La Pampa. III Jornadas Nacionales de Suelos de Ambientes Semiáridos y II Taller Nacional de Cartografía Digital}
+\cvevent{} {}
+{Septiembre 2017}{Buenos Aires, Argentina}{}{}
+
+\item {Identificación y mapeo de unidades geomorfológicas de la subregión mesetas y valles de la provincia de La Pampa. XX Congreso Geológico Argentino }
+\cvevent{} {}
+{2017}{Tucumán, Argentina}{}{}
+
+\item {Dinámica de la cobertura y uso del suelo en los últimos 50 años en el sector oeste de la subregión de los valles transversales de la Pampa. II Jornadas de Suelos de Ambientes Semiáridos}
+\cvevent{} {}
+{Mayo 2015}{La Pampa, Argentina}{}{}
+
+\end{itemize}
+
+\cvsection{Otros cursos y capacitaciones}
+
+\begin{itemize}
+\item {Curso: Introducción a la teledetección. Unidad de Educación y Formación Masiva (UEFM) de la Comisión Nacional de Actividades Espaciales (CONAE). Junio 2020.}
+
+\item {Curso: Satellite Remote Sensing for Agricultural Applications. NASA’s Applied Remote Sensing Training Program (ARSET). Abril 2020.}
+
+%\item {Curso: Elaboración de módulos temáticos 2Mp y su inclusión en propuestas de enseñanza. Programa 2Mp de la Comisión Nacional de Actividades Espaciales (CONAE). Mayo 2020.} 
+
+\item {Curso: Understanding Phenology with Remote Sensing. NASA´s Applied Remote Sensing Training Program (ARSET). Junio y Julio 2020.}
+
+\item {Curso: Investigating Time Series of Satellite Imagery. NASA’s Applied Remote Sensing Training Program (ARSET). Abril 2019.}
+
+\item {Workshop: ESA/CONAE C/L/X band SAR. Organizado por la Agencia Espacial Europea (ESA) y la Comisión Nacional de Actividades Espaciales (CONAE). Noviembre 2018.} 
+
+\item {Curso: Introducción a la teledetección SAR. Unidad de Educación y Formación Masiva (UEFM) de la Comisión Nacional de Actividades Espaciales (CONAE). Agosto 2018.}
+
+\item {Workshop: Escuela de Primavera en Teledetección. El radar SAR como herramienta de monitoreo del ambiente y la producción. Organizado por el Centro Latinoamericano de Formación Interdisciplinaria (CELFI) y el Instituto Mario Gulich (CONAE/UNC). Setiembre 2018.}
+
+\item {Workshop: Biología de la conservación en el manejo de los bosques nativos aplicado a las regiones de Monte y Espinal. Julio 2014.}
+
+\item {Curso: Metodología para la caracterización de sitios ecológicos. Facultad de Agronomía de la Universidad Nacional de La Pampa. Noviembre 2013.}
+\end{itemize}
+
+
+
+
+%\cvevent{University Management}{}{}{}{}{}
+%\begin{itemize}
+ %\item {Coordinator of the advisory committee on workplace and gender violence. Gulich Institute (UNC - CONAE). 
+ 
+ 
+ %(May 2023-- May 2024)}
+  %\item {Member of the board of directors of National University of Río Cuarto.
+  
+  
+  %(School of Exact, Physical-Chemical and Natural Sciences: August 2019 - May 2021; University: August 2021 - February 2022)}
+%\end{itemize}
+
+%\end{fullwidth}
+
+
+
+\end{document}
